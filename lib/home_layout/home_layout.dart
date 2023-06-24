@@ -65,7 +65,9 @@ List<Widget> taps = [
   }
 
   void AddTaskSheet(){
-    showModalBottomSheet(context: context, builder: (context) => AddTaskBottomSheet(),);
+    showModalBottomSheet(context: context, isScrollControlled: true, builder: (context) => Padding(
+      padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom,),
+        child: AddTaskBottomSheet()),);
   }
 
 }
